@@ -1,6 +1,6 @@
 # CodeQL Action
 
-This action runs GitHub's industry-leading static analysis engine, CodeQL, against a repository's source code to find security vulnerabilities. It then automatically uploads the results to GitHub so they can be displayed in the repository's security tab. CodeQL runs an extensible set of [queries](https://github.com/github/codeql), which have been developed by the community and the [GitHub Security Lab](https://securitylab.github.com/) to find common vulnerabilities in your code.
+This action runs GitHub's industry-leading static analysis engine, CodeQL, against a repository's source code to find security vulnerabilities. It then automatically uploads the results to GitHub so they can be displayed in the repository's security tab. CodeQL runs an extensible set of [queries](https://github.com/Faten-Org/codeql), which have been developed by the community and the [GitHub Security Lab](https://securitylab.github.com/) to find common vulnerabilities in your code.
 
 ## License
 
@@ -50,7 +50,7 @@ jobs:
 
       # Initializes the CodeQL tools for scanning.
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v1
+        uses: Faten-Org/codeql-action/init@v1
         # Override language selection by uncommenting this and choosing your languages
         # with:
         #   languages: go, javascript, csharp, python, cpp, java
@@ -58,7 +58,7 @@ jobs:
       # Autobuild attempts to build any compiled languages (C/C++, C#, or Java).
       # If this step fails, then you should remove it and run the build manually (see below).
       - name: Autobuild
-        uses: github/codeql-action/autobuild@v1
+        uses: Faten-Org/codeql-action/autobuild@v1
 
       # ℹ️ Command-line programs to run using the OS shell.
       # 📚 https://git.io/JvXDl
@@ -72,14 +72,14 @@ jobs:
       #   make release
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v1
+        uses: Faten-Org/codeql-action/analyze@v1
 ```
 
 If you prefer to integrate this within an existing CI workflow, it should end up looking something like this:
 
 ```yaml
 - name: Initialize CodeQL
-  uses: github/codeql-action/init@v1
+  uses: Faten-Org/codeql-action/init@v1
   with:
     languages: go, javascript
 
@@ -89,7 +89,7 @@ If you prefer to integrate this within an existing CI workflow, it should end up
   make release
 
 - name: Perform CodeQL Analysis
-  uses: github/codeql-action/analyze@v1
+  uses: Faten-Org/codeql-action/analyze@v1
 ```
 
 ### Configuration file
@@ -97,7 +97,7 @@ If you prefer to integrate this within an existing CI workflow, it should end up
 Use the `config-file` parameter of the `init` action to enable the configuration file. The value of `config-file` is the path to the configuration file you want to use. This example loads the configuration file `./.github/codeql/codeql-config.yml`.
 
 ```yaml
-- uses: github/codeql-action/init@v1
+- uses: Faten-Org/codeql-action/init@v1
   with:
     config-file: ./.github/codeql/codeql-config.yml
 ```

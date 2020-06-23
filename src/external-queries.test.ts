@@ -9,7 +9,7 @@ import * as util from "./util";
 test("checkoutExternalQueries", async t => {
   let config = new configUtils.Config();
   config.externalQueries = [
-    new configUtils.ExternalQuery("github/codeql-go", "df4c6869212341b601005567381944ed90906b6b"),
+    new configUtils.ExternalQuery("Faten-Org/codeql-go", "df4c6869212341b601005567381944ed90906b6b"),
   ];
 
   await util.withTmpDir(async tmpDir => {

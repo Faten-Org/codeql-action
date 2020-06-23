@@ -11,7 +11,7 @@ import * as upload_lib from './upload-lib';
 import * as util from './util';
 
 /**
- * A list of queries from https://github.com/github/codeql that
+ * A list of queries from https://github.com/Faten-Org/codeql that
  * we don't want to run. Disabling them here is a quicker alternative to
  * disabling them in the code scanning query suites. Queries should also
  * be disabled in the suites, and removed from this list here once the
