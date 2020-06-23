@@ -1,0 +1,29 @@
+name: 'CodeQL: Finish'
+description: 'Finalize CodeQL database'
+author: 'GitHub'
+inputs:
+  check_name:
+    description: The name of the check run to add text to.
+    required: false
+  output:
+    description: The path of the directory in which to save the SARIF results
+    required: false
+    default: '../results'
+  upload:
+    description: Upload the SARIF file
+    required: false
+    default: "true"
+  ram:
+    description: Override the amount of memory in MB to be used by CodeQL. By default, almost all the memory of the machine is used.
+    required: false
+  threads:
+    description: The number of threads to be used by CodeQL.
+    required: false
+    default: "1"
+  token:
+    default: ${{ github.token }}
+  matrix:
+    default: ${{ toJson(matrix) }}
+runs:
+  using: 'node12'
+  main: '../lib/finalize-db.js'
