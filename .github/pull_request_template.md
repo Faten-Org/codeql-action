@@ -4,4 +4,4 @@
   - [ ] CodeQL using init/analyze actions
   - [ ] 3rd party tool using upload action
 - [ ] Confirm this change is backwards compatible with existing workflows.
-- [ ] Confirm the [readme](https://github.com/github/codeql-action/blob/master/README.md) has been updated if necessary.
+- [ ] Confirm the [readme](https://github.com/Faten-Org/codeql-action/blob/master/README.md) has been updated if necessary.
